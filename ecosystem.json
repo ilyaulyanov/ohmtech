@@ -19,7 +19,6 @@
       "user" : "webmaster",
       "host" : "107.170.231.94",
       "ref"  : "origin/master",
-      "key"  : "/home/webmaster/.ssh/ohmtech",
       "repo" : "git@github.com:ilyaulyanov/ohmtech.git",
       "path" : "/var/www/production",
       "post-deploy" : "npm install —production && pm2 startOrRestart ecosystem.json —env production"    },
