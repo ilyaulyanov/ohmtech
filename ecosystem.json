@@ -3,15 +3,19 @@
 
 "apps" : [
     {
-      "name"      : "basicApp",
+      "name"      : "website-staging",
       "script"    : "app.js",
-      "env": {
-        "COMMON_VARIABLE": "true"
-      },
-      "env_production" : {
-        "NODE_ENV": "production"      }
+      "env":{
+        "NODE_ENV": "staging"
+      }
+    },
+    {
+      "name"      : "website-production",
+      "script"    : "app.js",
+      "env":{
+        "NODE_ENV": "production"
+      }
     }
-
 ],
 
 "deploy" : {
