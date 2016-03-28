@@ -28,7 +28,7 @@ router.post('/contact-submit', function(req, res){
         to: req.body.email, // list of receivers
         subject: 'New Contact Form Submission', // Subject line
         text: '🐴', // plaintext body
-        html: '<p><b>Name: </b> ' + req.body.name + '</p><p><b>Company: </b>' + req.body.company + '</p><p><b>Message: </b>' + req.body.message + '</>' // html body
+        html: '<p><b>Email: </b> ' + req.body.email + '</p><p><b>Name: </b> ' + req.body.name + '</p><p><b>Company: </b>' + req.body.company + '</p><p><b>Message: </b>' + req.body.message + '</>' // html body
     };
         // send mail with defined transport object
     transporter.sendMail(mailOptions, function(error, info){
