@@ -1,21 +1,4 @@
 {
-"apps" : [
-    {
-      "name"      : "website-staging",
-      "script"    : "app.js",
-      "env":{
-        "NODE_ENV": "staging"
-      }
-    },
-    {
-      "name"      : "website-production",
-      "script"    : "app.js",
-      "env":{
-        "NODE_ENV": "production"
-      }
-    }
-],
-
 "deploy" : {
     "production" : {
       "user" : "webmaster",

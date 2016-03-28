@@ -27,6 +27,10 @@ $blue: #00B7FF;
 $font-family: 'Lato', Helvetica, Verdana, sans-serif;
 $font-family-alt: 'Roboto', Helvetica, Verdana, sans-serif;
 
+$screen-sm-min: 544px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
 /*-----------------------------------*\
     # HELPERS			
 \*-----------------------------------*/
@@ -55,6 +59,31 @@ $font-family-alt: 'Roboto', Helvetica, Verdana, sans-serif;
   text-overflow: ellipsis;
   max-width: $max-width;
 }
+
+@mixin respond-to($media){
+	@if $media == xsmall{
+		@media (min-width: $screen-xs-min) {
+			@content;
+		}
+	}
+	@else if $media == small{
+		@media (min-width: $screen-sm-min) {
+			@content;
+		}
+	}
+	@else if $media == medium{
+		@media (min-width: $screen-md-min){
+			@content;
+		}
+	}
+	@else if $media == large{
+		@media (min-width: $screen-lg-min) {
+			@content;
+		}
+	}
+}
+
+
 /*-----------------------------------*\
     # NAVIGATION			
 \*-----------------------------------*/
@@ -124,7 +153,7 @@ $font-family-alt: 'Roboto', Helvetica, Verdana, sans-serif;
         background-position: bottom center;
         background-attachment: unset;
         background-repeat: no-repeat;
-        opacity: 0.5;
+        opacity: 0.9;
     }
     &.section--full-screen{
         height: 100vh;
@@ -132,7 +161,7 @@ $font-family-alt: 'Roboto', Helvetica, Verdana, sans-serif;
     .section__title{
         font-family: $font-family;
         font-weight: 300;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .section__header{
         font-weight: 300;
@@ -166,8 +195,10 @@ $font-family-alt: 'Roboto', Helvetica, Verdana, sans-serif;
                 color: #00B7FF;
             }
         }
-        .section-services__service + .section-services__service .card{
-            margin-bottom: 4rem;
+        @include respond-to(medium){
+            .section-services__service + .section-services__service .card{
+                margin-bottom: 4rem;
+            }
         }
         .asttbc{
             border-bottom: 1px dashed $blue;
@@ -323,7 +354,9 @@ $font-family-alt: 'Roboto', Helvetica, Verdana, sans-serif;
     
     @include box-shadow(0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24));
     &.contact__form--splash{
-        margin-top: -130px;
+        @include respond-to(medium){
+            margin-top: -190px;
+        }
         background: $white;
         .section__title{
             text-align: center;
