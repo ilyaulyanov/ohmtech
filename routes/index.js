@@ -8,10 +8,6 @@ var smtpConfig = {
     host: 'smtp.gmail.com',
     port: 465,
     secure: true, // use SSL
-    auth: {
-        user: 'eve.stream@gmail.com',
-        pass: 'Rd31xiRd31xi'
-    }
 };
 
 var transporter = nodemailer.createTransport(smtpConfig);
