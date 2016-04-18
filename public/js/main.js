@@ -1,12 +1,7 @@
 'use strict';
 
-$(function() {
-  console.log('Ready...');
-}); 
-
 $(document).ready(function(){
     App.init();
-    console.log(slimScroller);
 })
 
 
