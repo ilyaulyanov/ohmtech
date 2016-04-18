@@ -14206,6 +14206,7 @@
 
 	$(document).ready(function(){
 	    App.init();
+	    console.log(slimScroller);
 	})
 
 
@@ -14236,7 +14237,10 @@
 	        $('.asttbc').tooltip({
 	            trigger: 'hover',
 	            title: 'Applied Science Technologists & Technicians of BC'
-	        });        
+	        });  
+	        $('.nav-item').on('click', function(e,target){
+	            self.scrollTo(e, 0);
+	        });    
 	    },
 	    _getFormData: function(){
 	        var self = this;
@@ -14294,6 +14298,26 @@
 	            });
 	        }
 	        return validation;        
+	    },
+	    scrollTo: function(event, amount){
+	        var _this = this;
+	        var scrollAmount = amount || 0;
+	        // target element id
+	        var id = $(event.target).attr('href');
+	        
+	        // target element
+	        var $id = $(id);
+	        if ($id.length === 0) {
+	            return;
+	        }
+	        // prevent standard hash navigation (avoid blinking in IE)
+	        event.preventDefault();
+	        
+	        // top position relative to the document
+	        var pos = $(id).offset().top - scrollAmount;
+	        
+	        // animated top scrolling
+	        $('body, html').animate({scrollTop: pos});
 	    },
 	    send: function(){
 	        var self = App;

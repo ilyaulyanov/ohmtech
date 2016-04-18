@@ -80,11 +80,18 @@ a {
     .header .navbar__logo .navbar__logo__img {
       max-height: 100px;
       max-width: 100%; }
+  .header .section-cta .section__title {
+    margin-top: 100px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 2rem; }
+  .header .section-cta .section__subheader {
+    color: #fff; }
   .header .navbar {
     margin-top: 1.5rem; }
     .header .navbar .nav-link {
-      color: #333;
-      font-weight: 700;
+      color: #fff;
+      font-weight: 400;
       padding: .425rem;
       font-family: "Lato", Helvetica, Verdana, sans-serif;
       position: relative;
@@ -93,14 +100,14 @@ a {
       -o-transition: color 0.2s ease-in false;
       transition: color 0.2s ease-in; }
       .header .navbar .nav-link:hover {
-        color: #333;
-        border-color: #333; }
+        color: #f6f6f6;
+        border-color: #f6f6f6; }
     .header .navbar .nav-item.nav-item--right {
       float: right; }
     .header .navbar .nav-item + .nav-item {
       margin-left: 0.5rem; }
       .header .navbar .nav-item + .nav-item .nav-link:before {
-        background: #333;
+        background: #fff;
         border-radius: 100%;
         content: "";
         height: 3px;
@@ -115,26 +122,36 @@ a {
   padding: 2rem 0rem; }
   .section.section--splash {
     height: 427px;
-    background: url("../img/skyline_gradient.jpg");
-    background: url("../img/skyline_gradient.jpg");
-    background: url("../img/skyline_gradient.jpg");
-    background: url("../img/skyline_gradient.jpg");
-    -pie-background: url("../img/skyline_gradient.jpg");
-    background: url("../img/skyline_gradient.jpg");
+    background: url("../img/skyline_faded.jpg");
+    background: url("../img/skyline_faded.jpg");
+    background: url("../img/skyline_faded.jpg");
+    background: url("../img/skyline_faded.jpg");
+    -pie-background: url("../img/skyline_faded.jpg");
+    background: url("../img/skyline_faded.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-position: bottom center;
     background-attachment: unset;
-    background-repeat: no-repeat;
-    opacity: 0.9; }
+    background-repeat: no-repeat; }
+    .section.section--splash .company-description__logo {
+      margin-top: 100px; }
+      .section.section--splash .company-description__logo img {
+        display: none;
+        max-width: 600px; }
+    .section.section--splash .link {
+      margin: 0px 10px;
+      color: #fff;
+      font-size: 14px; }
+    .section.section--splash .company-description .company-description__text {
+      color: #fff; }
   .section.section--full-screen {
     height: 100vh; }
   .section .section__title {
     font-family: "Lato", Helvetica, Verdana, sans-serif;
     font-weight: 300;
-    font-size: 2.5rem; }
+    font-size: 3rem; }
   .section .section__header {
     font-weight: 300;
     font-family: "Lato", Helvetica, Verdana, sans-serif;
@@ -143,10 +160,18 @@ a {
     font-weight: 300;
     font-family: "Lato", Helvetica, Verdana, sans-serif;
     font-size: 1.25rem; }
+  .section.section-description {
+    background: #f6f6f6; }
+  .section.section--form {
+    background: #f6f6f6;
+    padding-bottom: 0; }
+    .section.section--form .copy {
+      color: #333;
+      margin-top: 3rem; }
   .section.section--padding {
     padding: 8rem 0rem; }
   .section.section-services .section__subheader {
-    margin-bottom: 8rem; }
+    margin-bottom: 3rem; }
   .section.section-services .card {
     border: none;
     font-family: "Roboto", Helvetica, Verdana, sans-serif; }
@@ -158,10 +183,9 @@ a {
       position: absolute;
       top: 1.2rem;
       left: -1.75rem;
-      color: #00B7FF; }
-  @media (min-width: 992px) {
-    .section.section-services .section-services__service + .section-services__service .card {
-      margin-bottom: 4rem; } }
+      color: #329043; }
+  .section.section-services .section-services__service + .section-services__service .card {
+    margin-bottom: 4rem; }
   .section.section-services .asttbc {
     border-bottom: 1px dashed #00B7FF; }
 
@@ -350,9 +374,6 @@ a {
     margin-top: 1rem; }
   .contact__form.contact__form--splash {
     background: #fff; }
-    @media (min-width: 992px) {
-      .contact__form.contact__form--splash {
-        margin-top: -190px; } }
     .contact__form.contact__form--splash .section__title {
       text-align: center;
       color: #444;

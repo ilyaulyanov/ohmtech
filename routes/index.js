@@ -8,6 +8,8 @@ var smtpConfig = {
     host: 'smtp.gmail.com',
     port: 465,
     secure: true, // use SSL
+    clientId: '788987927542-4m6ib8favk4fb68sed3rabom3clj5s9v.apps.googleusercontent.com',
+    clientSecret: 'jVyq-ihAkGkgN3DrL3BWQ2Al'
 };
 
 var transporter = nodemailer.createTransport(smtpConfig);
