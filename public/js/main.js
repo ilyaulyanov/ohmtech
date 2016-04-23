@@ -125,8 +125,9 @@ var App = {
         
         self.submitXHR = $.ajax({
             method: 'POST',
-            url: '/contact-submit',
-            data: App._getFormData()
+            url: "https://formspree.io/ohmtechfire@gmail.com", 
+            data: App._getFormData(),
+            dataType: 'json'
         });
         self.$overlay.fadeIn('fast');
         

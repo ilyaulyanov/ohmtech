@@ -14200,13 +14200,8 @@
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	$(function() {
-	  console.log('Ready...');
-	}); 
-
 	$(document).ready(function(){
 	    App.init();
-	    console.log(slimScroller);
 	})
 
 
@@ -14330,8 +14325,9 @@
 	        
 	        self.submitXHR = $.ajax({
 	            method: 'POST',
-	            url: '/contact-submit',
-	            data: App._getFormData()
+	            url: "https://formspree.io/ohmtechfire@gmail.com", 
+	            data: App._getFormData(),
+	            dataType: 'json'
 	        });
 	        self.$overlay.fadeIn('fast');
 	        
