@@ -199,16 +199,17 @@ $font-family-alt: 'Roboto', Helvetica, Verdana, sans-serif;
                 font-size: 1rem;
                 font-weight: 600;
                 margin-bottom: 0.25rem;
+                color: $gray;
             }
             .card-icon{
                 position: absolute;
-                top: 1.2rem;
-                left: -1.75rem;
+                top: 1.1rem;
+                left: -0.5rem;
                 color: $green;
             }
         }
         .section-services__service + .section-services__service .card{
-            margin-bottom: 4rem;
+            margin-bottom: 1rem;
         }
         .asttbc{
             border-bottom: 1px dashed $blue;
